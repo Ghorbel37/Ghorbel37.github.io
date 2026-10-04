@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Fastfetch from "./Fastfetch";
 import { profile, interests } from "../../data/profile";
 import { projects } from "../../data/projects";
 import type { Theme } from "../../hooks/useTheme";
@@ -34,6 +35,10 @@ export const commands: Record<string, Command> = {
   whoami: {
     description: "who is this",
     run: () => `${profile.name}, ${profile.role.toLowerCase()} from ${profile.location}.`,
+  },
+  fastfetch: {
+    description: "show my system info",
+    run: () => <Fastfetch />,
   },
   about: {
     description: "jump to about",
