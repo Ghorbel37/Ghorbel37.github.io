@@ -2,6 +2,18 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import { categoryLabel, type Project } from "../../data/projects";
 import { profile } from "../../data/profile";
 
+function ProjectIcon({ icon: Icon }: { icon: Project["icon"] }) {
+  if (typeof Icon === "string") {
+    return <img src={`./icons/${Icon}`} alt="" className="h-8 w-8 rounded-lg" />;
+  }
+
+  return (
+    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-raised text-blue transition-colors group-hover:bg-blue group-hover:text-bg">
+      <Icon className="h-[1.1rem] w-[1.1rem]" aria-hidden="true" />
+    </span>
+  );
+}
+
 export default function ProjectCard({ project }: { project: Project }) {
   const hasScreenshots = Boolean(project.screenshots?.length);
 
@@ -14,8 +26,11 @@ export default function ProjectCard({ project }: { project: Project }) {
     >
       {/* Info */}
       <div className="flex min-w-0 flex-1 flex-col gap-2.5">
-        <div className="flex justify-between gap-4 font-mono text-[0.7rem] uppercase tracking-wider text-muted">
-          <span className="text-green">{categoryLabel[project.category]}</span>
+        <div className="flex items-center justify-between gap-4 font-mono text-[0.7rem] uppercase tracking-wider text-muted">
+          <div className="flex items-center gap-2.5">
+            <ProjectIcon icon={project.icon} />
+            <span className="text-green">{categoryLabel[project.category]}</span>
+          </div>
           <span>{project.year}</span>
         </div>
         <h3 className={`font-semibold tracking-tight ${project.featured ? "text-xl" : "text-lg"}`}>{project.name}</h3>
