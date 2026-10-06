@@ -1,3 +1,28 @@
+import type { ComponentType, SVGProps } from "react";
+import {
+  BeakerIcon,
+  CameraIcon,
+  ChartBarIcon,
+  ChatBubbleBottomCenterTextIcon,
+  ChatBubbleLeftRightIcon,
+  CommandLineIcon,
+  CreditCardIcon,
+  FilmIcon,
+  HandRaisedIcon,
+  LinkIcon,
+  MoonIcon,
+  PaperAirplaneIcon,
+  PhotoIcon,
+  PuzzlePieceIcon,
+  QrCodeIcon,
+  ShieldExclamationIcon,
+  ShoppingCartIcon,
+  SignalIcon,
+  SunIcon,
+  UserGroupIcon,
+  ViewfinderCircleIcon,
+} from "@heroicons/react/24/outline";
+
 export type Category = "web" | "ai" | "iot" | "web3" | "tools";
 
 export type Screenshot = {
@@ -9,6 +34,8 @@ export type Screenshot = {
 
 export type Project = {
   name: string;
+  // The repo's own icon in public/icons, or a heroicon when the repo has none
+  icon: string | ComponentType<SVGProps<SVGSVGElement>>;
   repo: string;
   category: Category;
   tags: Category[];
@@ -41,6 +68,7 @@ export const categoryLabel: Record<Category, string> = {
 export const projects: Project[] = [
   {
     name: "DentiPlus",
+    icon: ChatBubbleLeftRightIcon,
     repo: "DentiPlus",
     category: "ai",
     tags: ["ai", "web3"],
@@ -57,6 +85,7 @@ export const projects: Project[] = [
   },
   {
     name: "RestoQR",
+    icon: QrCodeIcon,
     repo: "RestoQR",
     category: "web",
     tags: ["web"],
@@ -70,6 +99,7 @@ export const projects: Project[] = [
   },
   {
     name: "Brain tumor classification",
+    icon: ViewfinderCircleIcon,
     repo: "brain-tumor-classification-cnn-xai",
     category: "ai",
     tags: ["ai"],
@@ -83,6 +113,7 @@ export const projects: Project[] = [
   },
   {
     name: "Smart irrigation",
+    icon: "smart-irrigation.svg",
     repo: "esp8266-smart-irrigation",
     category: "iot",
     tags: ["iot"],
@@ -98,6 +129,7 @@ export const projects: Project[] = [
   },
   {
     name: "StaffMessenger",
+    icon: UserGroupIcon,
     repo: "StaffMessenger",
     category: "web",
     tags: ["web"],
@@ -109,6 +141,7 @@ export const projects: Project[] = [
   },
   {
     name: "Cross-Chain Impact Credits",
+    icon: LinkIcon,
     repo: "cross-chain-impact-credits",
     category: "web3",
     tags: ["web3"],
@@ -120,6 +153,7 @@ export const projects: Project[] = [
   },
   {
     name: "RAG vector chatbot",
+    icon: ChatBubbleBottomCenterTextIcon,
     repo: "rag-vector-chatbot",
     category: "ai",
     tags: ["ai"],
@@ -129,6 +163,7 @@ export const projects: Project[] = [
   },
   {
     name: "Fog ATM fraud detection",
+    icon: CreditCardIcon,
     repo: "fog-atm-fraud-detection",
     category: "ai",
     tags: ["ai", "iot"],
@@ -138,6 +173,7 @@ export const projects: Project[] = [
   },
   {
     name: "Smart greenhouse",
+    icon: SunIcon,
     repo: "smart-greenhouse-esp32",
     category: "iot",
     tags: ["iot"],
@@ -147,6 +183,7 @@ export const projects: Project[] = [
   },
   {
     name: "Hand gesture control",
+    icon: HandRaisedIcon,
     repo: "hand-gesture-control-suite",
     category: "ai",
     tags: ["ai"],
@@ -155,6 +192,7 @@ export const projects: Project[] = [
   },
   {
     name: "Fake post detector",
+    icon: ShieldExclamationIcon,
     repo: "fake-social-media-posts-detector",
     category: "ai",
     tags: ["ai", "web"],
@@ -164,6 +202,7 @@ export const projects: Project[] = [
   },
   {
     name: "LLaVA vision demo",
+    icon: PhotoIcon,
     repo: "llava-vision-demo",
     category: "ai",
     tags: ["ai"],
@@ -172,6 +211,7 @@ export const projects: Project[] = [
   },
   {
     name: "AdventureWorks BI",
+    icon: ChartBarIcon,
     repo: "adventureworks-bi-analytics",
     category: "ai",
     tags: ["ai"],
@@ -180,6 +220,7 @@ export const projects: Project[] = [
   },
   {
     name: "Phone web shop",
+    icon: ShoppingCartIcon,
     repo: "react-ecommerce-storefront",
     category: "web",
     tags: ["web"],
@@ -188,6 +229,7 @@ export const projects: Project[] = [
   },
   {
     name: "Research Lab Manager",
+    icon: BeakerIcon,
     repo: "angular-dev-web-project",
     category: "web",
     tags: ["web"],
@@ -196,6 +238,7 @@ export const projects: Project[] = [
   },
   {
     name: "Nikon ML-3 IR remote",
+    icon: CameraIcon,
     repo: "arduino-nikon-ml3-remote",
     category: "iot",
     tags: ["iot"],
@@ -204,6 +247,7 @@ export const projects: Project[] = [
   },
   {
     name: "Backlog Breaker",
+    icon: PuzzlePieceIcon,
     repo: "backlog-breaker",
     category: "tools",
     tags: ["tools"],
@@ -212,6 +256,7 @@ export const projects: Project[] = [
   },
   {
     name: "Media library optimizer",
+    icon: FilmIcon,
     repo: "media-library-optimizer",
     category: "tools",
     tags: ["tools"],
@@ -220,6 +265,7 @@ export const projects: Project[] = [
   },
   {
     name: "Site monitor tray",
+    icon: SignalIcon,
     repo: "site-monitor-tray",
     category: "tools",
     tags: ["tools"],
@@ -228,6 +274,7 @@ export const projects: Project[] = [
   },
   {
     name: "Terminal config",
+    icon: CommandLineIcon,
     repo: "wsl-terminal-config",
     category: "tools",
     tags: ["tools"],
@@ -236,6 +283,7 @@ export const projects: Project[] = [
   },
   {
     name: "Prayer times scraper",
+    icon: MoonIcon,
     repo: "tunisia-prayer-times-scraper",
     category: "tools",
     tags: ["tools"],
@@ -244,6 +292,7 @@ export const projects: Project[] = [
   },
   {
     name: "Telegram scraper",
+    icon: PaperAirplaneIcon,
     repo: "telegram-scraper",
     category: "tools",
     tags: ["tools"],
