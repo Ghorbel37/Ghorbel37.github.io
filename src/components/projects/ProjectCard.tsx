@@ -4,7 +4,8 @@ import { profile } from "../../data/profile";
 
 function ProjectIcon({ icon: Icon }: { icon: Project["icon"] }) {
   if (typeof Icon === "string") {
-    return <img src={`./icons/${Icon}`} alt="" className="h-8 w-8 rounded-lg" />;
+    const src = Icon.startsWith("https://") ? Icon : `./icons/${Icon}`;
+    return <img src={src} alt="" className="h-8 w-8 rounded-lg" />;
   }
 
   return (
