@@ -1,25 +1,9 @@
 import type { ComponentType, SVGProps } from "react";
 import {
-  BeakerIcon,
-  CameraIcon,
-  ChartBarIcon,
-  ChatBubbleBottomCenterTextIcon,
   ChatBubbleLeftRightIcon,
-  CommandLineIcon,
-  CreditCardIcon,
-  FilmIcon,
-  HandRaisedIcon,
   LinkIcon,
   MoonIcon,
-  PaperAirplaneIcon,
-  PhotoIcon,
-  PuzzlePieceIcon,
   QrCodeIcon,
-  ShieldExclamationIcon,
-  ShoppingCartIcon,
-  SignalIcon,
-  SunIcon,
-  UserGroupIcon,
   ViewfinderCircleIcon,
 } from "@heroicons/react/24/outline";
 
@@ -129,7 +113,7 @@ export const projects: Project[] = [
   },
   {
     name: "StaffMessenger",
-    icon: UserGroupIcon,
+    icon: "StaffMessenger.svg",
     repo: "StaffMessenger",
     category: "web",
     tags: ["web"],
@@ -153,7 +137,7 @@ export const projects: Project[] = [
   },
   {
     name: "RAG vector chatbot",
-    icon: ChatBubbleBottomCenterTextIcon,
+    icon: "rag-vector-chatbot.svg",
     repo: "rag-vector-chatbot",
     category: "ai",
     tags: ["ai"],
@@ -163,7 +147,7 @@ export const projects: Project[] = [
   },
   {
     name: "Fog ATM fraud detection",
-    icon: CreditCardIcon,
+    icon: "fog-atm-fraud-detection.svg",
     repo: "fog-atm-fraud-detection",
     category: "ai",
     tags: ["ai", "iot"],
@@ -173,7 +157,7 @@ export const projects: Project[] = [
   },
   {
     name: "Smart greenhouse",
-    icon: SunIcon,
+    icon: "smart-greenhouse-esp32.svg",
     repo: "smart-greenhouse-esp32",
     category: "iot",
     tags: ["iot"],
@@ -183,7 +167,7 @@ export const projects: Project[] = [
   },
   {
     name: "Hand gesture control",
-    icon: HandRaisedIcon,
+    icon: "hand-gesture-control-suite.svg",
     repo: "hand-gesture-control-suite",
     category: "ai",
     tags: ["ai"],
@@ -192,7 +176,7 @@ export const projects: Project[] = [
   },
   {
     name: "Fake post detector",
-    icon: ShieldExclamationIcon,
+    icon: "fake-social-media-posts-detector.svg",
     repo: "fake-social-media-posts-detector",
     category: "ai",
     tags: ["ai", "web"],
@@ -202,7 +186,7 @@ export const projects: Project[] = [
   },
   {
     name: "LLaVA vision demo",
-    icon: PhotoIcon,
+    icon: "llava-vision-demo.svg",
     repo: "llava-vision-demo",
     category: "ai",
     tags: ["ai"],
@@ -211,7 +195,7 @@ export const projects: Project[] = [
   },
   {
     name: "AdventureWorks BI",
-    icon: ChartBarIcon,
+    icon: "adventureworks-bi-analytics.svg",
     repo: "adventureworks-bi-analytics",
     category: "ai",
     tags: ["ai"],
@@ -220,7 +204,7 @@ export const projects: Project[] = [
   },
   {
     name: "Phone web shop",
-    icon: ShoppingCartIcon,
+    icon: "react-ecommerce-storefront.svg",
     repo: "react-ecommerce-storefront",
     category: "web",
     tags: ["web"],
@@ -229,7 +213,7 @@ export const projects: Project[] = [
   },
   {
     name: "Research Lab Manager",
-    icon: BeakerIcon,
+    icon: "angular-dev-web-project.svg",
     repo: "angular-dev-web-project",
     category: "web",
     tags: ["web"],
@@ -238,7 +222,7 @@ export const projects: Project[] = [
   },
   {
     name: "Nikon ML-3 IR remote",
-    icon: CameraIcon,
+    icon: "arduino-nikon-ml3-remote.svg",
     repo: "arduino-nikon-ml3-remote",
     category: "iot",
     tags: ["iot"],
@@ -247,7 +231,7 @@ export const projects: Project[] = [
   },
   {
     name: "Backlog Breaker",
-    icon: PuzzlePieceIcon,
+    icon: "backlog-breaker.svg",
     repo: "backlog-breaker",
     category: "tools",
     tags: ["tools"],
@@ -256,7 +240,7 @@ export const projects: Project[] = [
   },
   {
     name: "Media library optimizer",
-    icon: FilmIcon,
+    icon: "media-library-optimizer.svg",
     repo: "media-library-optimizer",
     category: "tools",
     tags: ["tools"],
@@ -265,7 +249,7 @@ export const projects: Project[] = [
   },
   {
     name: "Site monitor tray",
-    icon: SignalIcon,
+    icon: "site-monitor-tray.svg",
     repo: "site-monitor-tray",
     category: "tools",
     tags: ["tools"],
@@ -274,7 +258,7 @@ export const projects: Project[] = [
   },
   {
     name: "Terminal config",
-    icon: CommandLineIcon,
+    icon: "wsl-terminal-config.svg",
     repo: "wsl-terminal-config",
     category: "tools",
     tags: ["tools"],
@@ -292,7 +276,7 @@ export const projects: Project[] = [
   },
   {
     name: "Telegram scraper",
-    icon: PaperAirplaneIcon,
+    icon: "telegram-scraper.svg",
     repo: "telegram-scraper",
     category: "tools",
     tags: ["tools"],
