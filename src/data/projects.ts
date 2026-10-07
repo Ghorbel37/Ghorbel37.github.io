@@ -2,7 +2,6 @@ import type { ComponentType, SVGProps } from "react";
 import {
   ChatBubbleLeftRightIcon,
   LinkIcon,
-  MoonIcon,
   QrCodeIcon,
   ViewfinderCircleIcon,
 } from "@heroicons/react/24/outline";
@@ -18,7 +17,7 @@ export type Screenshot = {
 
 export type Project = {
   name: string;
-  // The repo's own icon in public/icons, or a heroicon when the repo has none
+  // The repo's own icon in public/icons (or its URL), or a heroicon when the repo has none
   icon: string | ComponentType<SVGProps<SVGSVGElement>>;
   repo: string;
   category: Category;
@@ -267,7 +266,9 @@ export const projects: Project[] = [
   },
   {
     name: "Prayer times scraper",
-    icon: MoonIcon,
+    icon:
+      // The Prayer Times app logo from Google Play, as in the repo README
+      "https://play-lh.googleusercontent.com/imB-yjAp8qNYa2-Efuk5zR2S7FEvc5vanzOzoXynWLR91DZ-piSjUzWW4nu13Cl3KVNrB-tnYmnGsMHbEndjmJw=w240-h480",
     repo: "tunisia-prayer-times-scraper",
     category: "tools",
     tags: ["tools"],
