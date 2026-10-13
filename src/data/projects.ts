@@ -248,7 +248,7 @@ export const projects: Project[] = [
   },
   {
     name: "Site monitor tray",
-    icon: "site-monitor-tray.svg",
+    icon: "site-monitor-tray.png",
     repo: "site-monitor-tray",
     category: "tools",
     tags: ["tools"],
