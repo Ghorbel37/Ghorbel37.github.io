@@ -13,15 +13,9 @@ export default function Projects() {
 
   return (
     <Section id="projects" title="Projects" aside={<ProjectFilters active={category} onChange={setCategory} />}>
-      {featured.length > 0 && (
-        <div className="mb-4 grid gap-4 md:grid-cols-2">
-          {featured.map((project) => (
-            <ProjectCard key={project.repo} project={project} />
-          ))}
-        </div>
-      )}
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {others.map((project) => (
+      {/* Featured projects first; every card has the same size, two per row from tablets up */}
+      <div className="grid auto-rows-fr gap-4 md:grid-cols-2">
+        {[...featured, ...others].map((project) => (
           <ProjectCard key={project.repo} project={project} />
         ))}
       </div>
