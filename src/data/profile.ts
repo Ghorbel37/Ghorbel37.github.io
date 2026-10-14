@@ -8,31 +8,32 @@ export const profile = {
   coordinates: "34.74°N 10.76°E",
   school: "ENIS, National Engineering School of Sfax",
   github: "https://github.com/Ghorbel37",
-  // TODO: add LinkedIn and a contact email
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/mahdighorbel",
   email: "",
 };
 
 export const about = [
-  "I studied engineering at ENIS, the National Engineering School of Sfax. For my final-year project I built AI-powered search features for a B2B e-commerce platform that serves several European countries.",
-  "I like projects that cross layers: a Flutter app talking to an LLM that writes its validated results to Ethereum, or a fraud model that runs on fog nodes and reports back over MQTT. Most of my side projects start because something in my own day annoyed me enough to automate it.",
+  "My degrees come from two countries: a computer science bachelor's from Le Mans University in France, earned alongside one from Sfax, then a master's in data science and an engineering degree from ENIS, with a blockchain summer school run by the University of Zurich along the way. My last big project shipped AI search to a shop that sells across Europe, so code, teammates and users from different places are normal to me.",
+  "Most of my side projects start because something in my own day annoyed me enough to automate it: a photo library too big for my disk, a game backlog too long to finish, plants that needed water while I was away.",
 ];
 
 export const facts: [string, string][] = [
   ["Based in", "Sfax, Tunisia"],
-  ["School", "ENIS, Sfax"],
+  ["Degrees from", "Tunisia, France"],
   ["Focus", "Full-stack web, applied ML, LLM systems"],
   ["Also into", "IoT, blockchain, automation"],
   ["Languages", "Java, Python, TypeScript, Dart, Solidity, C++"],
+  ["Spoken", "Arabic, English (C2), French"],
 ];
 
 export const stack: { group: string; items: string[] }[] = [
-  { group: "Backend", items: ["Java", "Spring Boot", "Python", "FastAPI", "Node.js", "Flask"] },
+  { group: "Backend", items: ["Java", "Spring Boot", "Python", "FastAPI", "Node.js", "Express", "Flask"] },
   { group: "Frontend & mobile", items: ["Angular", "React", "TypeScript", "Tailwind", "Flutter"] },
-  { group: "AI & data", items: ["TensorFlow", "Keras", "scikit-learn", "LLMs", "RAG · pgvector", "Power BI"] },
+  { group: "AI", items: ["TensorFlow", "Keras", "scikit-learn", "Transformers", "llama.cpp", "LLMs", "RAG · pgvector"] },
+  { group: "Data & BI", items: ["Spark", "Hadoop", "HiveQL", "SSIS", "SSAS", "Power BI", "Talend"] },
   { group: "Databases & messaging", items: ["MySQL", "PostgreSQL", "RabbitMQ", "MQTT"] },
   { group: "Infra & tools", items: ["Docker", "nginx", "Git", "Firebase", "WSL"] },
-  { group: "Hardware & web3", items: ["ESP32", "ESP8266", "Arduino", "Solidity", "Hardhat"] },
+  { group: "Hardware & web3", items: ["ESP32", "ESP8266", "Arduino", "Solidity", "Hardhat", "Hyperledger Caliper"] },
 ];
 
 export type Experience = {
@@ -45,35 +46,63 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    when: "2025 – 2026",
-    title: "AI search, final-year engineering project",
-    where: "ENIS · industry internship",
+    when: "Feb – Jul 2026",
+    title: "AI search, engineering final internship",
+    where: "DECADE, Sfax",
     description:
-      "Built AI-powered search features for a multi-country European B2B e-commerce platform: LLM agents that diagnose searches with no results, mass translation of product sheets, and a guided question-by-question search for non-experts, all traced in an LLM observability back office.",
+      "Built AI-powered search features for a multi-country European B2B e-commerce platform: LLM agents that diagnose searches with no results, automatic product enrichment, and a guided question-by-question search for non-experts, all traced in an LLM observability back office.",
     tech: ["Python", "LLMs", "Solr", "Langfuse", "Docker"],
   },
   {
+    when: "Jul – Aug 2025",
+    title: "Blockchain benchmarking intern",
+    where: "DESLab, Sfax",
+    description: "Compared the performance of blockchains for medical records, benchmarked with Hyperledger Caliper.",
+    tech: ["Hyperledger Caliper", "Blockchain"],
+  },
+  {
     when: "2025",
-    title: "DentiPlus",
-    where: "Master's final-year project · team of two",
+    title: "Blockchain tax control system",
+    where: "Freelance",
+    description: "A Web3 app that lets tax administrations monitor and manage taxes on an immutable, transparent ledger.",
+    tech: ["Ethereum", "Solidity", "Hardhat"],
+  },
+  {
+    when: "Feb – May 2025",
+    title: "DentiPlus, master's final internship",
+    where: "Zettaspark, Sfax · team of two",
     description:
       "A dental consultation app where an LLM drafts a diagnosis, a dentist validates it, and the validated result is recorded on Ethereum.",
     tech: ["FastAPI", "Flutter", "LLMs", "Ethereum"],
   },
   {
-    when: "2023",
-    title: "RestoQR",
-    where: "End-of-studies project",
+    when: "Feb – May 2023",
+    title: "RestoQR, bachelor's final internship",
+    where: "DK Soft, Sfax",
     description: "QR-code restaurant ordering with a phone menu per table and a staff back office.",
     tech: ["Spring Boot", "Angular", "MySQL", "Docker"],
   },
   {
-    when: "Summer 2022",
+    when: "Jul 2022",
     title: "Full-stack intern",
-    where: "Spark-It",
+    where: "Spark-IT, Sfax",
     description: "Built StaffMessenger, an employee management app with a chat between colleagues over RabbitMQ.",
     tech: ["Spring Boot", "Angular", "RabbitMQ"],
   },
+  {
+    when: "Jun – Jul 2021",
+    title: "Test automation intern",
+    where: "PRIMATEC Engineering, Sfax",
+    description: "Ran automatic and semi-automatic test scenarios on a CAN bus with Arduino.",
+    tech: ["Arduino", "CAN bus"],
+  },
+];
+
+export const education: { when: string; title: string; where: string }[] = [
+  { when: "2024 – 2026", title: "Computer science engineering", where: "ENIS, National Engineering School of Sfax" },
+  { when: "Jul 2025", title: "Summer school: Deep Dive into Blockchain", where: "University of Zurich, online" },
+  { when: "2023 – 2025", title: "Master's in data science and data engineering", where: "FSEGS, Sfax" },
+  { when: "2020 – 2023", title: "Bachelor's in computer science", where: "Le Mans University, France, double degree with a business computing bachelor's from FSEGS" },
 ];
 
 export const interests: { title: string; description: string }[] = [

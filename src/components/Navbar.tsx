@@ -1,7 +1,7 @@
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 import type { Theme } from "../hooks/useTheme";
 
-const links = ["about", "experience", "stack", "projects", "interests", "contact"];
+const links = ["about", "experience", "education", "stack", "projects", "interests", "contact"];
 
 export default function Navbar({ theme, onToggleTheme }: { theme: Theme; onToggleTheme: () => void }) {
   return (
