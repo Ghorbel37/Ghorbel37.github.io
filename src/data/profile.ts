@@ -46,7 +46,7 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    when: "Feb – Jul 2026",
+    when: "Feb - Jul 2026",
     title: "AI search, engineering final internship",
     where: "DECADE, Sfax",
     description:
@@ -54,7 +54,7 @@ export const experience: Experience[] = [
     tech: ["Python", "LLMs", "Solr", "Langfuse", "Docker"],
   },
   {
-    when: "Jul – Aug 2025",
+    when: "Jul - Aug 2025",
     title: "Blockchain benchmarking intern",
     where: "DESLab, Sfax",
     description: "Compared the performance of blockchains for medical records, benchmarked with Hyperledger Caliper.",
@@ -68,7 +68,7 @@ export const experience: Experience[] = [
     tech: ["Ethereum", "Solidity", "Hardhat"],
   },
   {
-    when: "Feb – May 2025",
+    when: "Feb - May 2025",
     title: "DentiPlus, master's final internship",
     where: "Zettaspark, Sfax · team of two",
     description:
@@ -76,7 +76,7 @@ export const experience: Experience[] = [
     tech: ["FastAPI", "Flutter", "LLMs", "Ethereum"],
   },
   {
-    when: "Feb – May 2023",
+    when: "Feb - May 2023",
     title: "RestoQR, bachelor's final internship",
     where: "DK Soft, Sfax",
     description: "QR-code restaurant ordering with a phone menu per table and a staff back office.",
@@ -90,7 +90,7 @@ export const experience: Experience[] = [
     tech: ["Spring Boot", "Angular", "RabbitMQ"],
   },
   {
-    when: "Jun – Jul 2021",
+    when: "Jun - Jul 2021",
     title: "Test automation intern",
     where: "PRIMATEC Engineering, Sfax",
     description: "Ran automatic and semi-automatic test scenarios on a CAN bus with Arduino.",
@@ -99,10 +99,10 @@ export const experience: Experience[] = [
 ];
 
 export const education: { when: string; title: string; where: string }[] = [
-  { when: "2024 – 2026", title: "Computer science engineering", where: "ENIS, National Engineering School of Sfax" },
+  { when: "2024 - 2026", title: "Computer science engineering", where: "ENIS, National Engineering School of Sfax" },
   { when: "Jul 2025", title: "Summer school: Deep Dive into Blockchain", where: "University of Zurich, online" },
-  { when: "2023 – 2025", title: "Master's in data science and data engineering", where: "FSEGS, Sfax" },
-  { when: "2020 – 2023", title: "Bachelor's in computer science", where: "Le Mans University, France, double degree with a business computing bachelor's from FSEGS" },
+  { when: "2023 - 2025", title: "Master's in data science and data engineering", where: "FSEGS, Sfax" },
+  { when: "2020 - 2023", title: "Bachelor's in computer science", where: "Le Mans University, France, double degree with a business computing bachelor's from FSEGS" },
 ];
 
 export const interests: { title: string; description: string }[] = [
