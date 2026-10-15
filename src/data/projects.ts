@@ -3,10 +3,11 @@ import {
   ChatBubbleLeftRightIcon,
   LinkIcon,
   QrCodeIcon,
+  SpeakerWaveIcon,
   ViewfinderCircleIcon,
 } from "@heroicons/react/24/outline";
 
-export type Category = "web" | "ai" | "iot" | "web3" | "tools";
+export type Category = "web" | "ai" | "iot" | "web3" | "games" | "tools";
 
 export type Screenshot = {
   file: string;
@@ -39,6 +40,7 @@ export const categories: { id: Category | "all"; label: string }[] = [
   { id: "ai", label: "AI & data" },
   { id: "iot", label: "IoT" },
   { id: "web3", label: "Blockchain" },
+  { id: "games", label: "Games" },
   { id: "tools", label: "Tools" },
 ];
 
@@ -47,6 +49,7 @@ export const categoryLabel: Record<Category, string> = {
   ai: "AI & data",
   iot: "IoT",
   web3: "Blockchain",
+  games: "Games",
   tools: "Tools",
 };
 
@@ -81,6 +84,21 @@ export const projects: Project[] = [
     highlight: "End-of-studies project",
     tech: ["Spring Boot", "Angular", "MySQL", "Docker"],
     screenshots: [{ file: "restoqr-menu.webp", alt: "Customer menu for one table on a phone" }],
+  },
+  {
+    name: "Tunichain",
+    icon: "Tunichain.svg",
+    repo: "Tunichain",
+    year: "2025",
+    category: "web3",
+    tags: ["web3", "web"],
+    featured: true,
+    description:
+      "Invoices, VAT and payments between sellers, banks and the tax administration, recorded on Ethereum. Everyone signs in with their wallet and gets the dashboard for their role.",
+    highlight: "Freelance project",
+    tech: ["React", "Express", "MongoDB", "Solidity", "Hardhat"],
+    screenshots: [{ file: "tunichain-invoices.webp", alt: "All invoices with their payment and TradeNet validation status" }],
+    wideScreenshots: true,
   },
   {
     name: "Brain tumor classification",
@@ -141,6 +159,36 @@ export const projects: Project[] = [
     tech: ["Hedera", "Cardano", "Plutus"],
   },
   {
+    name: "Carreau",
+    icon: "carreau.svg",
+    repo: "carreau",
+    year: "2026",
+    demo: "https://ghorbel37.github.io/carreau/",
+    category: "games",
+    tags: ["games"],
+    description:
+      "A swipe puzzle that started as a notebook sketch: pieces sit in the board's corners, and every swipe reshapes them to fit the walls flying in. Three worlds, a daily challenge and achievements.",
+    highlight: "Browser and Android",
+    tech: ["JavaScript", "Capacitor", "Playwright"],
+  },
+  {
+    name: "Neo Bloxorz",
+    icon: "neo-bloxorz.svg",
+    repo: "neo-bloxorz",
+    year: "2026",
+    demo: "https://ghorbel37.github.io/neo-bloxorz/",
+    category: "games",
+    tags: ["games"],
+    description:
+      "A block that changes shape every time it rolls. 36 hand-made puzzles, an endless roguelike mode and a new puzzle every day.",
+    highlight: "Browser and Android",
+    tech: ["JavaScript", "Capacitor"],
+    screenshots: [
+      { file: "neo-bloxorz-home.webp", alt: "Home screen of Neo Bloxorz" },
+      { file: "neo-bloxorz-bump.webp", alt: "The block bumping into a wall to change shape" },
+    ],
+  },
+  {
     name: "RAG vector chatbot",
     icon: "rag-vector-chatbot.svg",
     repo: "rag-vector-chatbot",
@@ -199,6 +247,18 @@ export const projects: Project[] = [
     description:
       "Flags misinformation in social media posts. Trained on scraped PolitiFact data balanced with back-translation.",
     tech: ["scikit-learn", "TF-IDF", "Flask"],
+    highlight: "Data mining course",
+  },
+  {
+    name: "Acoustic fire extinguisher",
+    icon: SpeakerWaveIcon,
+    repo: "acoustic-fire-extinguisher-ml",
+    year: "2024",
+    category: "ai",
+    tags: ["ai"],
+    description:
+      "Can sound waves put out a fire? Nine models compared on 17,000 lab tests, XGBoost reaching 97.8% accuracy, plus a small desktop app to try it.",
+    tech: ["scikit-learn", "XGBoost", "Tkinter"],
     highlight: "Data mining course",
   },
   {
@@ -286,6 +346,17 @@ export const projects: Project[] = [
     tags: ["tools"],
     description: "A Windows tray icon that watches your sites and notifies you when one goes down or comes back. Ships as a ready-to-run exe.",
     tech: ["Python"],
+  },
+  {
+    name: "Wizzz",
+    icon: "Wizzz.svg",
+    repo: "Wizzz",
+    year: "2024",
+    category: "tools",
+    tags: ["tools"],
+    description:
+      "Snapshots the file tree of every drive with WizTree, packs it into one archive and copies it to several places, every week on a schedule.",
+    tech: ["PowerShell", "WizTree", "7-Zip"],
   },
   {
     name: "Terminal config",
