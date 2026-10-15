@@ -82,9 +82,13 @@ export const commands: Record<string, Command> = {
     run: () => {
       goTo("contact");
       return (
-        <a href={profile.github} className="text-blue hover:underline">
-          {profile.github}
-        </a>
+        <div className="flex flex-col">
+          {[profile.github, profile.linkedin].filter(Boolean).map((url) => (
+            <a key={url} href={url} className="text-blue hover:underline">
+              {url}
+            </a>
+          ))}
+        </div>
       );
     },
   },
