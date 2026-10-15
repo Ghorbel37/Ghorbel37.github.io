@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { ArrowUpRightIcon, LockClosedIcon } from "@heroicons/react/24/outline";
 import { categoryLabel, type Project } from "../../data/projects";
 import { profile } from "../../data/profile";
 
@@ -59,8 +59,13 @@ function ProjectMedia({ project }: { project: Project }) {
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    // The whole card links to the repo through the title's stretched link, so the demo link can sit on top of it
-    <article className="@container group relative h-full min-w-0 rounded-xl border border-line bg-surface p-5 transition focus-within:border-blue hover:-translate-y-0.5 hover:border-blue">
+    // The whole card links to the repo through the title's stretched link, so the demo link can sit on top of it.
+    // Cards of private repos have no repo link.
+    <article
+      className={`@container group relative h-full min-w-0 rounded-xl border border-line bg-surface p-5 transition ${
+        project.codePublic ? "focus-within:border-blue hover:-translate-y-0.5 hover:border-blue" : ""
+      }`}
+    >
       <div className="flex h-full flex-col gap-4 @[26rem]:flex-row @[26rem]:gap-5">
         <ProjectMedia project={project} />
 
@@ -73,12 +78,16 @@ export default function ProjectCard({ project }: { project: Project }) {
             <span>{project.year}</span>
           </div>
           <h3 className="text-lg font-semibold tracking-tight">
-            <a
-              href={`${profile.github}/${project.repo}`}
-              className="outline-none after:absolute after:inset-0 after:rounded-xl after:content-['']"
-            >
-              {project.name}
-            </a>
+            {project.codePublic ? (
+              <a
+                href={`${profile.github}/${project.repo}`}
+                className="outline-none after:absolute after:inset-0 after:rounded-xl after:content-['']"
+              >
+                {project.name}
+              </a>
+            ) : (
+              project.name
+            )}
           </h3>
           <p className="text-sm leading-relaxed text-muted">{project.description}</p>
           {project.highlight && (
@@ -92,11 +101,17 @@ export default function ProjectCard({ project }: { project: Project }) {
               Live demo <ArrowUpRightIcon className="h-3 w-3" />
             </a>
           )}
-          <p className="mt-auto pt-2 pr-6 font-mono text-xs text-blue">{project.tech.join(" · ")}</p>
+          <p className={`mt-auto pt-2 font-mono text-xs text-blue ${project.codePublic ? "pr-6" : "pr-24"}`}>{project.tech.join(" · ")}</p>
         </div>
       </div>
 
-      <ArrowUpRightIcon className="absolute right-4 bottom-4 h-4 w-4 text-muted transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-blue" />
+      {project.codePublic ? (
+        <ArrowUpRightIcon className="absolute right-4 bottom-4 h-4 w-4 text-muted transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-blue" />
+      ) : (
+        <span className="absolute right-4 bottom-4 inline-flex items-center gap-1 font-mono text-[0.7rem] text-muted">
+          <LockClosedIcon className="h-3.5 w-3.5" aria-hidden="true" /> Private repo
+        </span>
+      )}
     </article>
   );
 }

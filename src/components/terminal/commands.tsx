@@ -65,11 +65,17 @@ export const commands: Record<string, Command> = {
     description: "list my projects",
     run: () => (
       <div className="flex flex-wrap gap-x-4">
-        {projects.map((project) => (
-          <a key={project.repo} href={`${profile.github}/${project.repo}`} className="text-blue hover:underline">
-            {project.repo}/
-          </a>
-        ))}
+        {projects.map((project) =>
+          project.codePublic ? (
+            <a key={project.repo} href={`${profile.github}/${project.repo}`} className="text-blue hover:underline">
+              {project.repo}/
+            </a>
+          ) : (
+            <span key={project.repo} className="text-muted">
+              {project.repo}/
+            </span>
+          ),
+        )}
       </div>
     ),
   },

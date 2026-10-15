@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>OpenCamRemote</title>
+  <rect width="64" height="64" rx="14" fill="#f0a53a"/>
+  <path d="M14 23h6l3.5-6h13l3.5 6h10a4 4 0 0 1 4 4v19a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4V27a4 4 0 0 1 4-4z" fill="#16202a"/>
+  <circle cx="30" cy="36.5" r="9.5" fill="#f0a53a"/>
+  <path d="M30 36.5v-6M30 36.5l4.5 2.6" fill="none" stroke="#16202a" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M46.5 16.5a6 6 0 0 1 4 4M47.5 10a12.5 12.5 0 0 1 9.5 9.5" fill="none" stroke="#16202a" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

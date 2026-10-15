@@ -21,6 +21,17 @@ All the text lives in `src/data`:
 
 Terminal commands are in `src/components/terminal/commands.tsx`.
 
+## Show or hide projects
+
+Cards link to their GitHub repo only when the repo is public: the build checks it, and a private repo gets a "Private repo" label instead. Make a repo public and its link appears on the next deploy.
+
+To hide things without touching the code, set these in **Settings > Secrets and variables > Actions > Variables**, as comma-separated repo names:
+
+- `HIDDEN_PROJECTS`: cards to leave out, from the grid and the terminal
+- `HIDDEN_DEMOS`: projects whose "Live demo" link is left out
+
+Then redeploy from **Actions > Deploy to GitHub Pages > Run workflow**. To preview the same thing locally, put the variables in a `.env.local` file (it isn't committed), e.g. `HIDDEN_PROJECTS=bledna,dinari-store`.
+
 ## Deploy
 
 Every push to `main` runs `.github/workflows/deploy.yml`, which lints, builds and publishes `dist/` to GitHub Pages. In the repo settings, set **Pages → Source** to **GitHub Actions** once.

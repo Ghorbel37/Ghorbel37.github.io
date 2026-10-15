@@ -1,8 +1,11 @@
 import type { ComponentType, SVGProps } from "react";
 import {
   ChatBubbleLeftRightIcon,
+  CpuChipIcon,
+  GiftIcon,
   LinkIcon,
   QrCodeIcon,
+  ShoppingBagIcon,
   SpeakerWaveIcon,
   ViewfinderCircleIcon,
 } from "@heroicons/react/24/outline";
@@ -32,7 +35,11 @@ export type Project = {
   featured?: boolean;
   screenshots?: Screenshot[];
   wideScreenshots?: boolean;
+  // Whether the repo is public, checked at build time: private repos get no link
+  codePublic: boolean;
 };
+
+type ProjectEntry = Omit<Project, "codePublic">;
 
 export const categories: { id: Category | "all"; label: string }[] = [
   { id: "all", label: "All" },
@@ -53,7 +60,7 @@ export const categoryLabel: Record<Category, string> = {
   tools: "Tools",
 };
 
-export const projects: Project[] = [
+const allProjects: ProjectEntry[] = [
   {
     name: "DentiPlus",
     icon: ChatBubbleLeftRightIcon,
@@ -297,6 +304,39 @@ export const projects: Project[] = [
     wideScreenshots: true,
   },
   {
+    name: "Bledna",
+    icon: "bledna.svg",
+    repo: "bledna",
+    year: "2026",
+    category: "web",
+    tags: ["web"],
+    description:
+      "Every school, hospital, post office and beach in Tunisia on one map, built from OpenStreetMap and official open data, so people can record the real state of each place.",
+    tech: ["TypeScript", "Python", "OpenStreetMap"],
+  },
+  {
+    name: "Dinari",
+    icon: GiftIcon,
+    repo: "dinari-store",
+    year: "2026",
+    category: "web",
+    tags: ["web"],
+    description:
+      "Gaming cards and streaming subscriptions priced in dinars, in French, Arabic and English. Pay from a wallet or by card, and the code shows up the moment the order is paid.",
+    tech: ["Next.js", "NestJS", "PostgreSQL", "Prisma"],
+  },
+  {
+    name: "Atelier 216",
+    icon: ShoppingBagIcon,
+    repo: "atelier216-store",
+    year: "2026",
+    category: "web",
+    tags: ["web"],
+    description:
+      "A WooCommerce shop set up for Tunisia: prices in dinars, the 24 governorates, Tunisian phone numbers and cash on delivery, all running in Docker with demo data.",
+    tech: ["WooCommerce", "WordPress", "Docker"],
+  },
+  {
     name: "Research Lab Manager",
     icon: "angular-dev-web-project.svg",
     repo: "angular-dev-web-project",
@@ -316,6 +356,28 @@ export const projects: Project[] = [
     tags: ["iot"],
     description: "Emulates Nikon's IR shutter remote from reverse-engineered timings. One button, one photo.",
     tech: ["Arduino", "IR"],
+  },
+  {
+    name: "OpenCamRemote",
+    icon: "OpenCamRemote.svg",
+    repo: "OpenCamRemote",
+    year: "2026",
+    category: "iot",
+    tags: ["iot"],
+    description:
+      "An IR camera remote and timelapse intervalometer on an ESP-01. Hold the button and your phone opens its settings page; between frames the chip sleeps, so a shoot can run for days.",
+    tech: ["ESP8266", "C++", "Captive portal"],
+  },
+  {
+    name: "CAN bus LED",
+    icon: CpuChipIcon,
+    repo: "arduino-can-bus-led",
+    year: "2021",
+    category: "iot",
+    tags: ["iot"],
+    description:
+      "Two Arduino boards switching an LED over a CAN bus, the receiver confirming each command. Written while learning how car networks talk.",
+    tech: ["Arduino", "C++", "MCP2515"],
   },
   {
     name: "Backlog Breaker",
@@ -391,3 +453,16 @@ export const projects: Project[] = [
     tech: ["Python", "Telethon"],
   },
 ];
+
+// Set at build time from GitHub and from the repo's Actions variables (see the README)
+declare const __PUBLIC_REPOS__: string[];
+declare const __HIDDEN_PROJECTS__: string[];
+declare const __HIDDEN_DEMOS__: string[];
+
+export const projects: Project[] = allProjects
+  .filter((project) => !__HIDDEN_PROJECTS__.includes(project.repo))
+  .map((project) => ({
+    ...project,
+    codePublic: __PUBLIC_REPOS__.includes(project.repo),
+    demo: __HIDDEN_DEMOS__.includes(project.repo) ? undefined : project.demo,
+  }));

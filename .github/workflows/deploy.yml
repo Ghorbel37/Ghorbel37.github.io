@@ -26,6 +26,11 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run build
+        env:
+          # Lists public repos so private ones get no link, and hides the cards and demo links set in the repo variables
+          GITHUB_TOKEN: ${{ github.token }}
+          HIDDEN_PROJECTS: ${{ vars.HIDDEN_PROJECTS }}
+          HIDDEN_DEMOS: ${{ vars.HIDDEN_DEMOS }}
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist
