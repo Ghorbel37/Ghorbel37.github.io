@@ -121,6 +121,8 @@ export const projects: Project[] = [
       "Employee management with a built-in chat between colleagues over RabbitMQ. Built during a summer internship at Spark-IT.",
     highlight: "Internship project",
     tech: ["Spring Boot", "Angular", "RabbitMQ"],
+    screenshots: [{ file: "staffmessenger-chat.webp", alt: "Chat between two employees" }],
+    wideScreenshots: true,
   },
   {
     name: "Cross-Chain Impact Credits",
@@ -156,6 +158,8 @@ export const projects: Project[] = [
     description:
       "Real-time fraud detection on the ATM itself: each machine scores its transactions with a Random Forest and streams the results over MQTT to a central dashboard. One Docker Compose command runs the whole demo.",
     tech: ["Python", "scikit-learn", "MQTT", "Streamlit", "Docker"],
+    screenshots: [{ file: "fog-atm-dashboard.webp", alt: "Central dashboard listing each ATM's latest transactions, one flagged as fraud" }],
+    wideScreenshots: true,
     highlight: "Fog and cloud computing course",
   },
   {
@@ -223,6 +227,8 @@ export const projects: Project[] = [
     tags: ["web"],
     description: "A phone shop with search, filters, a cart and recently viewed items. It runs entirely in the browser, with tests and a GitHub Pages deploy.",
     tech: ["React", "TypeScript", "Tailwind"],
+    screenshots: [{ file: "storefront-home.webp", alt: "Home page of the phone shop" }],
+    wideScreenshots: true,
   },
   {
     name: "Research Lab Manager",
