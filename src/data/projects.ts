@@ -215,7 +215,7 @@ const allProjects: ProjectEntry[] = [
     category: "ai",
     tags: ["ai", "iot"],
     description:
-      "Real-time fraud detection on the ATM itself: each machine scores its transactions with a Random Forest and streams the results over MQTT to a central dashboard. One Docker Compose command runs the whole demo.",
+      "Fraud detection that runs on the ATM itself: the central server ships a Random Forest to each machine, which scores every transaction locally, emails an alert on fraud and streams its results over MQTT to a live dashboard. One Docker Compose command runs the demo.",
     tech: ["Python", "scikit-learn", "MQTT", "Streamlit", "Docker"],
     screenshots: [{ file: "fog-atm-dashboard.webp", alt: "Central dashboard listing each ATM's latest transactions, one flagged as fraud" }],
     wideScreenshots: true,
@@ -396,8 +396,8 @@ const allProjects: ProjectEntry[] = [
     year: "2026",
     category: "tools",
     tags: ["tools"],
-    description: "Downscales videos and recompresses photos while keeping EXIF metadata and file timestamps.",
-    tech: ["Python", "ffmpeg", "exiftool"],
+    description: "One command, mlo, that shrinks a phone's photo and video library: GPU-encoded videos, recompressed JPEGs, EXIF data and file dates kept, originals never touched. With dry runs and tab completion.",
+    tech: ["Python", "Typer", "ffmpeg", "exiftool"],
   },
   {
     name: "Site monitor tray",
