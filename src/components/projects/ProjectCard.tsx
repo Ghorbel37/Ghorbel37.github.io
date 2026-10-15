@@ -59,10 +59,8 @@ function ProjectMedia({ project }: { project: Project }) {
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <a
-      href={`${profile.github}/${project.repo}`}
-      className="@container group relative block h-full min-w-0 rounded-xl border border-line bg-surface p-5 transition hover:-translate-y-0.5 hover:border-blue"
-    >
+    // The whole card links to the repo through the title's stretched link, so the demo link can sit on top of it
+    <article className="@container group relative h-full min-w-0 rounded-xl border border-line bg-surface p-5 transition focus-within:border-blue hover:-translate-y-0.5 hover:border-blue">
       <div className="flex h-full flex-col gap-4 @[26rem]:flex-row @[26rem]:gap-5">
         <ProjectMedia project={project} />
 
@@ -74,16 +72,31 @@ export default function ProjectCard({ project }: { project: Project }) {
             </div>
             <span>{project.year}</span>
           </div>
-          <h3 className="text-lg font-semibold tracking-tight">{project.name}</h3>
+          <h3 className="text-lg font-semibold tracking-tight">
+            <a
+              href={`${profile.github}/${project.repo}`}
+              className="outline-none after:absolute after:inset-0 after:rounded-xl after:content-['']"
+            >
+              {project.name}
+            </a>
+          </h3>
           <p className="text-sm leading-relaxed text-muted">{project.description}</p>
           {project.highlight && (
             <span className="self-start rounded bg-raised px-2 py-0.5 font-mono text-xs">{project.highlight}</span>
+          )}
+          {project.demo && (
+            <a
+              href={project.demo}
+              className="relative z-10 inline-flex items-center gap-1 self-start font-mono text-xs text-green hover:underline"
+            >
+              Live demo <ArrowUpRightIcon className="h-3 w-3" />
+            </a>
           )}
           <p className="mt-auto pt-2 pr-6 font-mono text-xs text-blue">{project.tech.join(" · ")}</p>
         </div>
       </div>
 
       <ArrowUpRightIcon className="absolute right-4 bottom-4 h-4 w-4 text-muted transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-blue" />
-    </a>
+    </article>
   );
 }

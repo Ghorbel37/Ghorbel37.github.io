@@ -26,6 +26,8 @@ export type Project = {
   tech: string[];
   year?: string;
   highlight?: string;
+  // A live version people can try
+  demo?: string;
   featured?: boolean;
   screenshots?: Screenshot[];
   wideScreenshots?: boolean;
@@ -225,6 +227,7 @@ export const projects: Project[] = [
     name: "Phone web shop",
     icon: "react-ecommerce-storefront.svg",
     repo: "react-ecommerce-storefront",
+    demo: "https://ghorbel37.github.io/react-ecommerce-storefront/",
     year: "2026",
     category: "web",
     tags: ["web"],
