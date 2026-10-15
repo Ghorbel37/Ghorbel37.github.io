@@ -253,13 +253,13 @@ export const projects: Project[] = [
     name: "Acoustic fire extinguisher",
     icon: SpeakerWaveIcon,
     repo: "acoustic-fire-extinguisher-ml",
-    year: "2024",
+    year: "2025",
     category: "ai",
     tags: ["ai"],
     description:
       "Can sound waves put out a fire? Nine models compared on 17,000 lab tests, XGBoost reaching 97.8% accuracy, plus a small desktop app to try it.",
     tech: ["scikit-learn", "XGBoost", "Tkinter"],
-    highlight: "Data mining course",
+    highlight: "Machine learning course",
   },
   {
     name: "LLaVA vision demo",
