@@ -55,23 +55,23 @@ export const commands: Record<string, Command> = {
     },
   },
   projects: {
-    description: "list my projects",
+    description: "jump to projects",
     run: () => {
       goTo("projects");
-      return (
-        <div className="flex flex-wrap gap-x-4">
-          {projects.map((project) => (
-            <a key={project.repo} href={`${profile.github}/${project.repo}`} className="text-blue hover:underline">
-              {project.repo}/
-            </a>
-          ))}
-        </div>
-      );
+      return "cd ~/projects";
     },
   },
   ls: {
-    description: "same as projects",
-    run: (args, context) => commands.projects.run(args, context),
+    description: "list my projects",
+    run: () => (
+      <div className="flex flex-wrap gap-x-4">
+        {projects.map((project) => (
+          <a key={project.repo} href={`${profile.github}/${project.repo}`} className="text-blue hover:underline">
+            {project.repo}/
+          </a>
+        ))}
+      </div>
+    ),
   },
   interests: {
     description: "what I do off the clock",
