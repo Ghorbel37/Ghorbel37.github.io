@@ -17,8 +17,8 @@ export default function Hero({ onSetTheme }: { onSetTheme: (theme: Theme) => voi
         </h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
           I build things that cross layers: a{" "}
-          <strong className="font-semibold text-fg">dental assistant that pairs an LLM with Ethereum</strong>, a fraud model that
-          lives on fog nodes, a <strong className="font-semibold text-fg">sprinkler you set from your phone</strong>.
+          <strong className="font-semibold text-fg">dental assistant that pairs an LLM with Ethereum</strong>, a fraud detection
+          model that lives on ATMs, a <strong className="font-semibold text-fg">smart irrigation system</strong>.
         </p>
         <p className="mt-4 max-w-xl text-lg font-semibold leading-relaxed text-fg">
           I learn whatever the next project needs, and keep tinkering long after it works.
