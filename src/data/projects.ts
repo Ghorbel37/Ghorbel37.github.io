@@ -118,7 +118,7 @@ export const projects: Project[] = [
     tags: ["web"],
     year: "2022",
     description:
-      "Employee management with a built-in chat between colleagues over RabbitMQ. Built during a summer internship at Spark-It.",
+      "Employee management with a built-in chat between colleagues over RabbitMQ. Built during a summer internship at Spark-IT.",
     highlight: "Internship project",
     tech: ["Spring Boot", "Angular", "RabbitMQ"],
   },
@@ -154,8 +154,8 @@ export const projects: Project[] = [
     category: "ai",
     tags: ["ai", "iot"],
     description:
-      "Real-time card fraud detection on fog nodes at the edge, with models shipped over FTP and central monitoring over MQTT.",
-    tech: ["Python", "MQTT", "Streamlit"],
+      "Real-time fraud detection on the ATM itself: each machine scores its transactions with a Random Forest and streams the results over MQTT to a central dashboard. One Docker Compose command runs the whole demo.",
+    tech: ["Python", "scikit-learn", "MQTT", "Streamlit", "Docker"],
     highlight: "Fog and cloud computing course",
   },
   {
@@ -221,7 +221,7 @@ export const projects: Project[] = [
     repo: "react-ecommerce-storefront",
     category: "web",
     tags: ["web"],
-    description: "A storefront with search, filters, a cart and recently viewed items, against a mock API.",
+    description: "A phone shop with search, filters, a cart and recently viewed items. It runs entirely in the browser, with tests and a GitHub Pages deploy.",
     tech: ["React", "TypeScript", "Tailwind"],
   },
   {
@@ -268,7 +268,7 @@ export const projects: Project[] = [
     repo: "site-monitor-tray",
     category: "tools",
     tags: ["tools"],
-    description: "A Windows tray icon that turns red and notifies you when a site goes down.",
+    description: "A Windows tray icon that watches your sites and notifies you when one goes down or comes back. Ships as a ready-to-run exe.",
     tech: ["Python"],
   },
   {
@@ -288,7 +288,7 @@ export const projects: Project[] = [
     repo: "tunisia-prayer-times-scraper",
     category: "tools",
     tags: ["tools"],
-    description: "A full year of prayer times from Tunisia's meteorological institute, exported to CSV.",
+    description: "Prayer times for every Tunisian governorate, scraped from the meteorological institute and published as CSVs by a yearly workflow.",
     tech: ["Python"],
   },
   {
