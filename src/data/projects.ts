@@ -4,7 +4,6 @@ import {
   CpuChipIcon,
   GiftIcon,
   LinkIcon,
-  QrCodeIcon,
   ShoppingBagIcon,
   SpeakerWaveIcon,
   ViewfinderCircleIcon,
@@ -80,7 +79,7 @@ const allProjects: ProjectEntry[] = [
   },
   {
     name: "ScanNServe",
-    icon: QrCodeIcon,
+    icon: "ScanNServe.svg",
     repo: "ScanNServe",
     category: "web",
     tags: ["web"],
