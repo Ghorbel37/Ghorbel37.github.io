@@ -77,7 +77,7 @@ export const experience: Experience[] = [
   },
   {
     when: "Feb - May 2023",
-    title: "Scan'N'Serve, bachelor's final internship",
+    title: "ScanNServe, bachelor's final internship",
     where: "DK Soft, Sfax",
     description: "QR-code restaurant ordering with a phone menu per table and a staff back office.",
     tech: ["Spring Boot", "Angular", "MySQL", "Docker"],

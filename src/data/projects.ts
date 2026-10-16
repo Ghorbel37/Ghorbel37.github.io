@@ -79,7 +79,7 @@ const allProjects: ProjectEntry[] = [
     ],
   },
   {
-    name: "Scan'N'Serve",
+    name: "ScanNServe",
     icon: QrCodeIcon,
     repo: "ScanNServe",
     category: "web",
