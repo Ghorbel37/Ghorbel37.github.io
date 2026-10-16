@@ -390,13 +390,14 @@ const allProjects: ProjectEntry[] = [
     tech: ["Python"],
   },
   {
-    name: "Media library optimizer",
-    icon: "media-library-optimizer.svg",
-    repo: "media-library-optimizer",
+    name: "Media Library Compressor",
+    icon: "media-library-compressor.svg",
+    repo: "media-library-compressor",
+    demo: "https://ghorbel37.github.io/media-library-compressor/",
     year: "2026",
     category: "tools",
     tags: ["tools"],
-    description: "One command, mlo, that shrinks a phone's photo and video library: GPU-encoded videos, recompressed JPEGs, EXIF data and file dates kept, originals never touched. With dry runs and tab completion.",
+    description: "One command, mlc, that shrinks a phone's photo and video library: GPU-encoded videos, recompressed JPEGs, EXIF data and file dates kept, originals never touched. With dry runs, tab completion and a portable build that bundles ffmpeg and exiftool.",
     tech: ["Python", "Typer", "ffmpeg", "exiftool"],
   },
   {
