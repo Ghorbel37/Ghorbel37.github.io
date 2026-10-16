@@ -389,6 +389,20 @@ const allProjects: ProjectEntry[] = [
     tech: ["Python"],
   },
   {
+    name: "LocalLeaf",
+    icon: "LocalLeaf.png",
+    repo: "LocalLeaf",
+    year: "2026",
+    category: "tools",
+    tags: ["tools"],
+    description:
+      "Overleaf, but local, in VS Code. The PDF rebuilds on every save, a double-click jumps between the PDF and the source, and one command installs the LaTeX toolchain on Windows or Linux and creates a ready-to-fill report.",
+    highlight: "Template repo",
+    tech: ["LaTeX", "VS Code", "PowerShell", "Bash"],
+    screenshots: [{ file: "localleaf-vscode.webp", alt: "The LaTeX source on the left and the PDF on the right, synced to the same chart" }],
+    wideScreenshots: true,
+  },
+  {
     name: "Media Library Compressor",
     icon: "media-library-compressor.svg",
     repo: "media-library-compressor",
