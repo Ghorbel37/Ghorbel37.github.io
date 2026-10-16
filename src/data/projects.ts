@@ -79,9 +79,9 @@ const allProjects: ProjectEntry[] = [
     ],
   },
   {
-    name: "RestoQR",
+    name: "Scan'N'Serve",
     icon: QrCodeIcon,
-    repo: "RestoQR",
+    repo: "ScanNServe",
     category: "web",
     tags: ["web"],
     year: "2023",
